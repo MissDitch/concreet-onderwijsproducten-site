@@ -500,7 +500,7 @@ footer h3 {
   padding: 0.4rem 0 0 0;
   margin-bottom: 0rem;
 }
-.blokRechts h4 {
+.blokRechts h3, .blokRechts h4 {
   color: #ffffff;
   text-transform: uppercase;
 }
