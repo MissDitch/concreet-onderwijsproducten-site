@@ -1,0 +1,604 @@
+html {
+  max-width: 1000px; //75rem;
+  margin: auto;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  color: #121820;   /*  zwart  */
+}
+h1, h2,h3,h4,h5,h6 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.01rem;
+  position: relative;
+  color: #63A830; /*  groen */
+}
+h2 {
+  font-size: 1.3rem;
+  color: #000000;
+  font-weight: 600;
+  position: relative;
+}
+h3 {
+  font-size: 0.9rem;
+  font-weight:700;
+  letter-spacing: 0.1rem;
+}
+h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+/* pseudo-selector zoekt de tel: tekst in een gegeven url,
+en de :before pseudo-selector plaatst het unicode karakter voor telephone receiver ervoor  */
+a[href^="tel:"]:before {
+  content: "\1f4de";
+  margin-right: 0.5em;
+}
+.bold  {
+  font-weight: 700;
+}
+.allCaps {
+  text-transform: uppercase;
+}
+.row.row {
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+.noWrap {
+    white-space: noWrap;
+}
+
+/* navigatie bovenin */
+.small-12.sticky {
+  margin-top: 0;
+}
+.top-bar {
+  padding: 0rem;
+  background-color: rgba(255, 255, 255, 0);
+//  margin-top: 0.6rem;
+}
+.top-bar ul, .title-area ul {
+  list-style-type: none;
+  background-color: #ffffff;
+}
+.top-bar li, .title-area li {
+  display: inline;
+}
+.menu li a {
+    padding: 0rem 0rem 0rem 0;
+  }
+.menu li a:hover {
+    color: #63A830; /*  groen */
+  }
+.menu li {
+    padding:0.7rem 1rem 0.7rem 0;
+}
+
+.top-bar-right {
+//margin-top: -1rem;
+  display: inline-block;
+}
+.top-bar-right a {
+ font-size: 0.8rem;
+  color: #000000;
+}
+a.top_menu__link {
+    vertical-align: middle;
+}
+img.fb{
+  width: 14px;
+}
+.social {
+  list-style-type: none;
+  margin-left: 0rem;
+}
+.social li {
+  display: inline;
+  padding-right: 0.7rem;
+}
+
+#search-icon {
+  height: 35px;
+  min-width: 180px;
+  max-width: 195px;
+  height: 35px;
+  width: auto;
+  border-radius: 5px;
+  padding: 10px 0px;
+}
+#search-icon input {
+  margin: -7px 0 0 0;
+  padding-left: 30px;
+  float: left;
+  width: 90%;
+  min-width: 180px;
+  height: 30px;
+  background: #eee url(../img/search-icon-dc60dcf6eec361818e70c7380fe0167f.png) left no-repeat;
+  background-origin: border-box;
+  border: none;
+  font-size: 13px;
+}
+/* alleen zichtbaar bij kleine schermen */
+.title-bar {
+  background-color: #6CA53A;
+//  margin-top: -1rem;
+}
+.title-bar h1 {
+  color: #ffffff;
+}
+.title-bar h2 {
+  font-size: 0.9rem;
+  float: right;
+  color: #ffffff;
+}
+.dropdown-pane {
+  font-size: 0.8rem;
+}
+.dropdown-pane.columns {
+      padding-left: 0;
+}
+
+/*  logo en slogan  */
+
+.logo {
+  padding: 0.5rem 0 0 0;
+  float: left;
+  width: 20%;
+  max-width: 20%;
+}
+.slogan {
+  float: right;
+  margin-top: 0.3rem;
+}
+
+/*  hoofdnavigatie onder logo */
+.top-bar-left {
+  float: left;
+  clear: left;
+}
+.top-bar-left a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #000000;
+}
+.top-bar-left  li a:before {
+  content: "\f111";  /*  fa-circle  */
+	font-family: 'FontAwesome';
+	padding: 0px 5px 0 0px;
+}
+.top-bar-left li ul li a:before {
+  content: "";
+}
+.is-dropdown-submenu {
+  border: 0px solid #eee;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  transition: all 0.2s ease-in-out;
+  padding: 0rem 0.6rem 0.6rem 0.6rem;
+}
+.is-accordion-submenu-parent > a::after {
+  border-color: #000000 transparent transparent;
+}
+li.is-accordion-submenu-item {
+    padding-left: 0.6rem;
+}
+li.is-accordion-submenu-item:first-child {
+    margin-top: 0.6rem;
+}
+li.is-accordion-submenu-item:last-child {
+    padding-bottom: 0.2rem;
+}
+.is-accordion-submenu-item a {
+  color: #aaaaaa;
+}
+/*
+nav ul.flexnav li ul li a:before {
+	content: "";
+}
+*/
+/*transparante kleurbanen bovenaan en onderaan  */
+
+.topBorder {
+  position: absolute;
+  background-color: rgba(105, 96, 87, 0.5);
+  width: 100%;
+  height: 10px;
+  top: 0px;
+}
+.bottomBorder {
+  position: absolute;
+  background-color: rgba(99, 168, 48, 0.8);
+  width: 100%;
+  height: 10px;
+  bottom: 0px;
+}
+
+/*  donkergrijze button met pijl in witte cirkel */
+
+.linkKnopPijl {
+  background-color: #696057; /* grijs*/
+  border-radius:  5px;
+  margin: 0rem 0.5rem 0rem 0rem;
+  padding:0rem 0.5rem 0.2rem 0.5rem;
+  /* display en float zorgen ervoor dat div de breedte van de elementen erin volgt  */
+  display: inline;
+  float: left;
+}
+.linkKnopPijl:hover {
+  background-color: #63A830; /*  groen */
+}
+.linkKnopPijl a {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #ffffff;
+  vertical-align: middle;
+}
+.linkKnopPijl img {
+    padding: 0 0 0 0.5rem;
+}
+/*  button met groen verloop */
+
+.linkKnopGroen {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#437530+0,60af45+100 */
+  background: #437530; /* Old browsers */
+  background: -moz-linear-gradient(top,  #437530 0%, #63a830 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #437530 0%,#63a830 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #437530 0%,#63a830 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#437530', endColorstr='#63a830',GradientType=0 ); /* IE6-9 */
+  border-radius:  5px;
+  margin: 0rem 0rem 0rem 0rem;
+  padding:0.5rem 0.6rem 0.6rem 0.6rem;
+  width: 11rem;
+  float: right;
+  text-align: center;
+}
+.linkKnopGroen a:hover {
+  background-color: #696057; /*  grijs */
+}
+.linkKnopGroen a, .linkKnopGroen p {
+  font-weight: 700;
+  font-size: 0.6rem;
+  color: #ffffff;
+}
+.linkKnopGroen a {
+  padding: 0.3rem 0.7rem;
+  background-color: #63a830;
+  border-radius: 13px;
+}
+.linkKnopGroen p {
+  padding: 0.4rem 0 0 0;
+  margin-bottom: 0rem;
+}
+
+.schaduw-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.2s ease-in-out;
+}
+.schaduw-1:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);  /* schaduw-3 */
+}
+.schaduw-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.schaduw-2:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); /* schaduw-4 */
+}
+.schaduw-3 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.schaduw-4 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.schaduw-5 {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+
+/* HOME: blok met achtergrondfoto */
+
+.home_main{
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  background-image: url("../img/home_foto.jpg");
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-size: contain;
+  margin: 0 auto;
+  padding-top: 2rem;
+  color: #ffffff;
+  }
+.home_main:after{
+  padding-top: 12%;
+  display: block;
+  content: '';
+}
+.banner {
+  background-color: #696057; /* grijs*/
+  background-image: url("../img/Lint-Concreet.png");
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-size: 100%;
+  background-position: bottom;
+  height: 4rem;
+  color: #ffffff;
+  text-align: center;
+  border-radius:  5px;
+  margin: 0rem 1rem 0rem 0rem;
+  padding: 0.4rem 1rem 1rem 1rem;
+  display: inline;
+  float: right;
+}
+
+/* HOME: koppen met links aan de linkerkant  */
+.home_kop {
+  background-color: #ffffff;
+  border-radius: 0 0 0 15px;
+  padding: 0rem 0.5rem 0.5rem 0.5rem;
+  margin: 1rem 0 1rem 1rem;
+  float: left;
+}
+.no-js .top-bar {
+  display: none;
+}
+
+
+
+/* FOOTER */
+
+footer {
+  float: left;
+  width: 100%;
+  padding: 0.5rem 0 1rem 0;
+  margin-top: 0.5rem;
+  background-color: rgba(18, 24, 32, 0.8);
+  background-image: url("../img/Voetafdruk-Concreet_wit.png"), url("../img/Voetafdruk-Concreet_wit.png");
+  background-repeat: no-repeat;
+  background-position: 90% 9%, 33% 60%;
+}
+footer h3 {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin: 0.5rem 0rem 0rem 0rem;
+}
+.footerInfo {
+  list-style-type: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0.8rem 0rem 0rem 0rem;
+  float: left;
+}
+.footerInfo a {
+  font-weight: 700;
+  color: #ffffff;
+}
+.footerInfo .social {
+  margin-top: 0.5rem;
+}
+.lint {
+  background-image: url("../img/Lint_Concreet_groot.png");
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-size: 100%;
+  height: 127px;
+}
+.linkKnopFooter {
+  border-radius:  5px;
+  margin:0.8rem 3rem 0rem 0rem;
+  padding:5px 10px 10px 0px;
+  font-size: 0.8rem;
+  color: #ffffff;
+  /* display en float hieronder zorgen ervoor dat div de breedte van de elementen erin volgt  */
+  display: inline;
+  float: left;
+}
+.linkKnopFooter:hover {
+//  background-color: rgba(99, 168, 48, 0.5); /*  groen */
+}
+.linkKnopFooter p {
+  margin-bottom: 0.6rem;
+}
+.linkKnopFooter a {
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  background-color: #121820;
+  border-radius: 13px;
+  color: #ffffff;   /*  wit  */
+  margin-bottom: 1rem;
+}
+.linkKnopFooter a:hover {
+  background-color: #63A830; /*  groen */
+}
+
+
+
+/* OVERIGE PAGINA'S   */
+.main {
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* de buitenste div waar alle kadercontainers in staan  */
+.kaderGroep {
+  margin: 3rem 0 1rem 0;
+}
+/* de kadercontainer */
+.kaderContainer {
+  padding: 0 1rem 0 0;
+}
+
+/* binnen de kadercontainer: kader met afgeronde hoek linksonder, en kop in groene balk */
+.kader {
+  border: 1px solid #ccc;   /*  lichtgrijs  */
+  background-color: #ffffff;
+  border-radius: 0 0 0 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);  /*schaduw-3  */
+  padding: 0;
+  position: relative;
+}
+.kader h3 {
+  color: #ffffff;
+  background-color: #63A830; /*  groen */
+  padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 0 0 10px 0;
+}
+.kader p {
+  padding: 0.5rem;
+  font-size: inherit;
+}
+.kader .linkKnopPijl {
+  margin: 1rem 0.5rem 1.5rem 0.5rem;
+  float:none;
+  display: inline-block;
+}
+
+/* blok rechts met groen verloop  */
+
+.blokRechts {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#63a830+0,437530+100 */
+  background: #63a830; /* Old browsers */
+  background: -moz-linear-gradient(top,  #63a830 0%, #437530 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #63a830 0%,#437530 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #63a830 0%,#437530 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63a830', endColorstr='#437530',GradientType=0 ); /* IE6-9 */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.2s ease-in-out;
+  border-radius:  5px;
+  margin: 0rem 0rem 0rem 1rem;
+  padding:0.8rem 0.6rem 0.8rem 0.6rem;
+  width: 18rem;
+  float: right;
+  text-align: center;
+}
+.blokRechts a:hover {
+  background-color: #696057; /*  grijs */
+}
+.blokRechts a, .blokRechts p {
+  font-weight: 700;
+  color: #ffffff;
+}
+.blokRechts a {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  margin: 1rem 0 0.5rem 0;
+  background-color: #63a830;
+  border: 1px solid #fff;
+  border-radius: 13px;
+}
+.blokRechts p {
+  font-size: 0.8rem;
+  padding: 0.4rem 0 0 0;
+  margin-bottom: 0rem;
+}
+.blokRechts h4 {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+
+
+@media screen and (min-width: 40em) {  /* 40em  */
+  .no-js .top-bar {
+    display: block;
+  }
+  .no-js .title-bar {
+    display: none;
+  }
+  .kaderContainer:last-of-type {
+    padding: 0;
+  }
+}
+
+
+@media screen and (max-width: 39.9375em) {  /*  39.9375em  63.9375em */
+  .top-bar {
+    padding: 0rem 0.6rem 0 0;
+    background-color: rgba(255, 255, 255, 1.0);
+    z-index: 10;
+    width: 70%;
+    position: absolute;
+    border-radius: 0 0 10px 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  .top-bar-left {
+    margin: 1rem 0rem 0.8rem 0;
+  }
+  .top-bar-left > ul > li:last-child {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1.4rem;
+  }
+  .top-bar-right{
+    margin: 0rem 0rem 0.8rem 0rem;
+  }
+  .top-bar-left, .top-bar-right {
+    padding-left: 0.5rem;
+  }
+  .menu.medium-horizontal > li {
+    display: block;
+  }
+  .menu li {
+    padding-right: 0
+  }
+
+  .logo,
+  .slogan {
+    display: none;
+  }
+  .home_main {
+    background-color: #ccc;
+    background-image: url("../img/20160706_0001_bew20.jpg");
+    color: #000000;
+    padding-bottom: 1rem;
+  }
+  .home_main:after {
+    padding-top: 0%;
+  }
+  .home_kop{
+    margin: 0rem 0 1rem 0rem;
+  }
+  .banner {
+    margin: 0rem 0rem 1rem 0rem;
+  }
+  h1  {
+    font-size: 1.1rem;
+  }
+  .title-bar a {
+    padding-left: 0rem;
+    font-size: 1.1rem;
+  }
+  .title-bar h2 {
+    float: left;
+    font-size: 0.8rem;
+  }
+  .input-group, .input-group-field, .input-group-label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .linkKnopPijl {
+    margin: 0.5rem 0.5rem 0.5rem 0rem;
+    clear: left;
+  }
+  .linkKnopPijl a {
+    font-size: 80%;
+  }
+  .linkKnopGroen {
+    margin: 0.5rem 0rem 0rem 0rem;
+  }
+  .linkKnopFooter {
+    margin-right: 0rem;
+    clear: left;
+  }
+  .kaderContainer {
+    margin-bottom: 2rem;
+  }
+}
